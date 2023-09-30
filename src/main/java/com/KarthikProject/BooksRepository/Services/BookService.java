@@ -12,4 +12,5 @@ public interface BookService {
 	public Book getBookByID(int id);
 	public Book getBookByName(String name);
 	public Book getBookByISBN(String isbn);
+	public void saveBook(Book book);
 }

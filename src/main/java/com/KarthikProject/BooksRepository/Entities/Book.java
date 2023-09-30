@@ -14,8 +14,16 @@ import jakarta.persistence.Table;
 @Table(name="books")
 public class Book {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int bookId;
+	
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+	public int getBookId() {
+		return bookId;
+	}
+	
 	private String bookNameString;
 	private String isbn;
 	

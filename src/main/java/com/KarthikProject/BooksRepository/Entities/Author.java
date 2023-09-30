@@ -11,8 +11,15 @@ import jakarta.persistence.Table;
 @Table(name = "author")
 public class Author {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int authorId;
+	
+	public void setAuthorId(int authorId) {
+		this.authorId = authorId;
+	}
+	public int getAuthorId() {
+		return authorId;
+	}
 	
 	private String authorName;
 	
@@ -30,15 +37,13 @@ public class Author {
 	}
 	private String contactNumber;
 	/*Bi-Directional Mapping -  mapping done on both entities so both can control other entity*/
-	@OneToOne(mappedBy = "author")
-	private Book book;
+//	@OneToOne(mappedBy = "author")
+//	private Book book;
+//
+//	public Book getBook() {
+//		return book;
+//	}
 
-	public Book getBook() {
-		return book;
-	}
-	public void setBook(Book book) {
-		this.book = book;
-	}
 	
 	
 	

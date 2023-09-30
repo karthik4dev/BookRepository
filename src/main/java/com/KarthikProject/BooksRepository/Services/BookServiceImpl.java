@@ -3,31 +3,48 @@ package com.KarthikProject.BooksRepository.Services;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.KarthikProject.BooksRepository.Entities.Book;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.KarthikProject.BooksRepository.Entities.Book;
+import com.KarthikProject.BooksRepository.Repositories.BookRepository;
+
+@Service("bookServiceImpl")
 public class BookServiceImpl implements BookService{
+	
+	@Autowired
+	BookRepository bookRepository;
+	
 	List<Book> bookList= new ArrayList<>();
 	@Override
 	public List<Book> getAllBooks() {
-		
+		bookList.addAll(bookRepository.findAllBooks());
+		return bookList;
 	}
 
 	@Override
 	public Book getBookByID(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return bookRepository.findByBookId(id);
+		
 	}
 
 	@Override
 	public Book getBookByName(String name) {
 		// TODO Auto-generated method stub
-		return null;
+		Book book=bookRepository.findByBookNameString(name);
+		return book;
 	}
 
 	@Override
 	public Book getBookByISBN(String isbn) {
-		// TODO Auto-generated method stub
-		return null;
+		Book book = bookRepository.findByIsbn(isbn);
+		return book;
+	}
+
+	@Override
+	public void saveBook(Book book) {
+		bookRepository.save(book);
 	}
 
 }
