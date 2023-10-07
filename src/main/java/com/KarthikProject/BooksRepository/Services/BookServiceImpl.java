@@ -1,50 +1,52 @@
 package com.KarthikProject.BooksRepository.Services;
 
-import java.util.ArrayList;
-import java.util.List;
 
+
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.KarthikProject.BooksRepository.Entities.Book;
-import com.KarthikProject.BooksRepository.Repositories.BookRepository;
+import com.KarthikProject.BooksRepository.Repositories.BookRepositoryRepo;
+
+
 
 @Service("bookServiceImpl")
 public class BookServiceImpl implements BookService{
-	
 	@Autowired
-	BookRepository bookRepository;
+    BookRepositoryRepo bookRepositoryRepo;
 	
-	List<Book> bookList= new ArrayList<>();
-	@Override
-	public List<Book> getAllBooks() {
-		bookList.addAll(bookRepository.findAllBooks());
-		return bookList;
-	}
+	
+	
 
 	@Override
-	public Book getBookByID(int id) {
-		return bookRepository.findByBookId(id);
+	public Optional<Book> getBookByID(int id) {
+		return bookRepositoryRepo.findById(id);
 		
 	}
 
 	@Override
 	public Book getBookByName(String name) {
 		// TODO Auto-generated method stub
-		Book book=bookRepository.findByBookNameString(name);
-		return book;
+		return (Book) bookRepositoryRepo.findByBookNameString(name);
 	}
 
 	@Override
 	public Book getBookByISBN(String isbn) {
-		Book book = bookRepository.findByIsbn(isbn);
-		return book;
+		return (Book) bookRepositoryRepo.findByIsbn(isbn);
 	}
 
 	@Override
 	public void saveBook(Book book) {
-		bookRepository.save(book);
+		bookRepositoryRepo.save(book);
+		
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		return (List<Book>) bookRepositoryRepo.findAll();
 	}
 
 }

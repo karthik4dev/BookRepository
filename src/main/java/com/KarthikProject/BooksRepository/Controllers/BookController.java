@@ -1,6 +1,7 @@
 package com.KarthikProject.BooksRepository.Controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -36,10 +37,10 @@ public class BookController {
 	
 	@SuppressWarnings("unchecked")
 	@GetMapping("/{id}")
-	ResponseEntity<Book> getBookByID(@RequestParam int id){
-		Book book=bookService.getBookByID(id);
+	ResponseEntity<Optional<Book>> getBookByID(@RequestParam int id){
+		Optional<Book> book=bookService.getBookByID(id);
 		if(book.equals(null)) {
-			return (ResponseEntity<Book>) ResponseEntity.notFound();
+			return (ResponseEntity<Optional<Book>>) ResponseEntity.notFound();
 		}
 		return ResponseEntity.ok(book);
 	}
