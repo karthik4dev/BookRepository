@@ -3,6 +3,9 @@ package com.KarthikProject.BooksRepository.Controllers;
 import java.util.List;
 import java.util.Optional;
 
+
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +23,14 @@ import com.KarthikProject.BooksRepository.Services.BookService;
 @RestController
 @RequestMapping(value = "books")
 public class BookController {
+	Counter meterCounter;
+	public BookController(MeterRegistry meterRegistry){
+		meterCounter= Counter.builder("Hit_counter")
+				.description("Hits on the Books URL")
+				.register(meterRegistry);
+	}
+
+
 	@Qualifier("bookServiceImpl")
 	@Autowired
 	BookService bookService;
@@ -32,6 +43,7 @@ public class BookController {
 	
 	@GetMapping("/All")
 	List<Book> getAllBooks(){
+		meterCounter.increment();
 		return bookService.getAllBooks();
 	}
 	
