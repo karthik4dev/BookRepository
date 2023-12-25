@@ -1,53 +1,28 @@
 package com.KarthikProject.BooksRepository.Entities;
 
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
+import lombok.*;
 
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name="books")
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int bookId;
-	
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
-	}
-	public int getBookId() {
-		return bookId;
-	}
-	
+	@Column(name = "book_id")
+	private int id;
+
 	private String bookNameString;
 	private String isbn;
 	
-	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
-	@JoinColumn(name = "authorID")
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH},fetch = FetchType.LAZY)
+	@JoinColumn(name="author_id")
 	private Author author;
-	
-	public String getBookNameString() {
-		return bookNameString;
-	}
-	public void setBookNameString(String bookNameString) {
-		this.bookNameString = bookNameString;
-	}
-	public String getIsbn() {
-		return isbn;
-	}
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
-	public Author getAuthor() {
-		return author;
-	}
-	public void setAuthor(Author author) {
-		this.author = author;
-	}
+
 }

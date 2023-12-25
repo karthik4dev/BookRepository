@@ -2,6 +2,8 @@ package com.KarthikProject.BooksRepository.Services;
 
 
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,7 +15,7 @@ import com.KarthikProject.BooksRepository.Repositories.BookRepositoryRepo;
 
 
 
-@Service("bookServiceImpl")
+@Service("BookServiceImpl")
 public class BookServiceImpl implements BookService{
 	@Autowired
     BookRepositoryRepo bookRepositoryRepo;
@@ -46,7 +48,13 @@ public class BookServiceImpl implements BookService{
 
 	@Override
 	public List<Book> getAllBooks() {
-		return (List<Book>) bookRepositoryRepo.findAll();
+		List<Book> booksList=new ArrayList<>();
+		Iterator<Book> bookIterable = bookRepositoryRepo.findAll().iterator();
+		while(bookIterable.hasNext()!=false)
+		{
+			booksList.add(bookIterable.next());
+		}
+		return booksList;
 	}
 
 }

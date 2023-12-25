@@ -1,20 +1,14 @@
 package com.KarthikProject.BooksRepository.Controllers;
 
-import java.util.List;
 import java.util.Optional;
 
 
-import io.micrometer.core.instrument.Counter;
-import io.micrometer.core.instrument.MeterRegistry;
+import io.swagger.v3.oas.annotations.Operation;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.KarthikProject.BooksRepository.Entities.Book;
 import com.KarthikProject.BooksRepository.Services.BookService;
@@ -23,38 +17,40 @@ import com.KarthikProject.BooksRepository.Services.BookService;
 @RestController
 @RequestMapping(value = "books")
 public class BookController {
-	Counter meterCounter;
-	public BookController(MeterRegistry meterRegistry){
-		meterCounter= Counter.builder("Hit_counter")
-				.description("Hits on the Books URL")
-				.register(meterRegistry);
+
+
+	private BookService bookService;
+
+	@Autowired
+	private void setBookService(@Qualifier("BookServiceImpl") BookService bookService){
+		this.bookService=bookService;
 	}
 
+//
+//	public void setClientService(BookService bookService){
+//		this.bookService=bookService;
+//	}
 
-	@Qualifier("bookServiceImpl")
-	@Autowired
-	BookService bookService;
-	
+	@Operation(summary = "Create a Book")
 	@PostMapping("/createBook")
 	void createBook(@RequestBody Book book){
 		bookService.saveBook(book);
-		
 	}
-	
+
+	@Operation(summary = "Show All Books")
 	@GetMapping("/All")
-	List<Book> getAllBooks(){
-		meterCounter.increment();
-		return bookService.getAllBooks();
+	ResponseEntity<List<Book>> getAllBooks(){
+		return (ResponseEntity<List<Book>>) bookService.getAllBooks();
 	}
 	
 	@SuppressWarnings("unchecked")
+	@Operation(summary = "Show Book by ID")
 	@GetMapping("/{id}")
-	ResponseEntity<Optional<Book>> getBookByID(@RequestParam int id){
-		Optional<Book> book=bookService.getBookByID(id);
-		if(book.equals(null)) {
-			return (ResponseEntity<Optional<Book>>) ResponseEntity.notFound();
-		}
+	ResponseEntity<Optional<Book>> getBookByID( @PathVariable int id){
+		Optional<Book> book =bookService.getBookByID(id);
+
 		return ResponseEntity.ok(book);
+
 	}
 	
 	

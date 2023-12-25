@@ -15,7 +15,7 @@ import java.util.List;
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private int id;
 
     @Column(name = "user_name",nullable = false)
       private String userName;
@@ -24,7 +24,8 @@ public class Users {
 
     private boolean active;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user",cascade ={CascadeType.DETACH,CascadeType.MERGE,
+                                            CascadeType.PERSIST,CascadeType.REFRESH})
     private List<UserAuthorities> roles;
 
 

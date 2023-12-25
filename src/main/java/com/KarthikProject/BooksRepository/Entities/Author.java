@@ -2,51 +2,29 @@ package com.KarthikProject.BooksRepository.Entities;
 
 import java.util.List;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
-@Table(name = "author")
+@RequiredArgsConstructor
+@Data
+@Table(name = "authors")
 public class Author {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public int authorId;
-	
-	public void setAuthorId(int authorId) {
-		this.authorId = authorId;
-	}
-	public int getAuthorId() {
-		return authorId;
-	}
+	@Column(name = "author_id")
+	public int id;
 	
 	private String authorName;
-	
-	public String getAuthorName() {
-		return authorName;
-	}
-	public void setAuthorName(String authorName) {
-		this.authorName = authorName;
-	}
-	
 	
 	private String email;
 	/*Bi-Directional Mapping -  mapping done on both entities so both can control other entity*/
 	@OneToMany(mappedBy = "author")
-	private List<Book> book;
+	private List<Book> books;
 
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 
-	
-	
-	
-	
 }
