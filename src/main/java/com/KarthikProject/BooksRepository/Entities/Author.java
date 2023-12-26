@@ -2,15 +2,17 @@ package com.KarthikProject.BooksRepository.Entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+import lombok.NoArgsConstructor;
+
 
 @Entity
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Table(name = "authors")
 public class Author {
@@ -24,6 +26,7 @@ public class Author {
 	private String email;
 	/*Bi-Directional Mapping -  mapping done on both entities so both can control other entity*/
 	@OneToMany(mappedBy = "author")
+	@JsonManagedReference
 	private List<Book> books;
 
 

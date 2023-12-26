@@ -1,10 +1,13 @@
 package com.KarthikProject.BooksRepository.Controllers;
 
-import java.util.Optional;
 
 
 import io.swagger.v3.oas.annotations.Operation;
+
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +25,7 @@ public class BookController {
 	private BookService bookService;
 
 	@Autowired
-	private void setBookService(@Qualifier("BookServiceImpl") BookService bookService){
+	private void setBookService(BookService bookService){
 		this.bookService=bookService;
 	}
 
@@ -39,14 +42,14 @@ public class BookController {
 
 	@Operation(summary = "Show All Books")
 	@GetMapping("/All")
-	ResponseEntity<List<Book>> getAllBooks(){
-		return (ResponseEntity<List<Book>>) bookService.getAllBooks();
+	List<Book> getAllBooks(){
+		return bookService.getAllBooks();
 	}
 	
 	@SuppressWarnings("unchecked")
 	@Operation(summary = "Show Book by ID")
 	@GetMapping("/{id}")
-	ResponseEntity<Optional<Book>> getBookByID( @PathVariable int id){
+	ResponseEntity<Optional<Book>> getBookByID(@PathVariable int id){
 		Optional<Book> book =bookService.getBookByID(id);
 
 		return ResponseEntity.ok(book);

@@ -4,6 +4,7 @@ package com.KarthikProject.BooksRepository.RepoTests;
 import com.KarthikProject.BooksRepository.Controllers.BookController;
 import com.KarthikProject.BooksRepository.Services.BookService;
 import com.KarthikProject.BooksRepository.Services.BookServiceImpl;
+import org.apache.tomcat.util.http.parser.Authorization;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -27,7 +28,7 @@ public class BookRepoTest {
     void getBooksWithoutAuthenticationTest(){
         try {
             mockMvc.perform(get("/books/All").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(status().is4xxClientError());
+                    .andExpect(status().is(401));
         }
         catch (Exception e){
             e.printStackTrace();
