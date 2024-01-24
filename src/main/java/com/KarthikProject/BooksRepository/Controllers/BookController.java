@@ -2,6 +2,7 @@ package com.KarthikProject.BooksRepository.Controllers;
 
 
 
+import com.KarthikProject.BooksRepository.Exception.BookNotFoundException;
 import io.swagger.v3.oas.annotations.Operation;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,7 +57,18 @@ public class BookController {
 		return ResponseEntity.ok(book);
 
 	}
-	
+
+	@Operation(summary = "To Update Book by ID")
+	@PatchMapping("/updatebook/{id}")
+	HttpStatus updateBookById(@PathVariable int id,@RequestBody Book book) throws BookNotFoundException {
+		return this.bookService.UpdateBookById(id,book);
+	}
+
+	@Operation(summary = "To delete book by ID ")
+	@DeleteMapping("/deletebook/{id}")
+	HttpStatus deleteBookById(@PathVariable int id) throws BookNotFoundException {
+		return bookService.deleteBookById(id);
+	}
 	
 	
 }

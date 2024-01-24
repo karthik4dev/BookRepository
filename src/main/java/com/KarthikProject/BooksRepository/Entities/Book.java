@@ -1,7 +1,7 @@
 package com.KarthikProject.BooksRepository.Entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,6 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @Entity
 @Table(name="books")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,9 +22,8 @@ public class Book {
 	private String bookNameString;
 	private String isbn;
 	
-	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH})
 	@JoinColumn(name="author_id",referencedColumnName = "author_id")
-	@JsonBackReference
 	private Author author;
 
 }
