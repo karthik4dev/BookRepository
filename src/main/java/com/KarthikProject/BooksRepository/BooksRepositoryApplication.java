@@ -16,6 +16,7 @@ public class BooksRepositoryApplication {
 
 
 	public static void main(String[] args) {
+		Thread.yield();
 		SpringApplication.run(BooksRepositoryApplication.class, args);
 	}
 
