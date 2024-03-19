@@ -6,7 +6,6 @@ import com.KarthikProject.BooksRepository.Services.BookService;
 import com.KarthikProject.BooksRepository.Services.BookServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -15,7 +14,6 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -37,16 +35,16 @@ public class BookRepoTest {
 
     @WithMockUser("karthik")
     @Test
-    void getBooksWithoutAuthenticationTest(){
-        when(bookService.getBookByID(0)).thenReturn(bookServiceImpl.getBookByID(0));
+    void getBooksWithAuthenticationTest() throws Exception {
+        given(bookService.getBookByID(0)).willThrow(NullPointerException.class);
 
-        try {
-            mockMvc.perform(get("/books/All").accept(MediaType.APPLICATION_JSON))
-                    .andExpect(status().is(401));
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+
+        mockMvc.perform(get("/books/All").accept(MediaType.APPLICATION_JSON)
+                        .header("Authorization","S2FydGhpazp7bm9vcH0uUGFzc3dvcmQ="))
+                    .andExpect(status().is(200));
+
+
+
     }
 
 

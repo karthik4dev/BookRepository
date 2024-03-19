@@ -11,6 +11,9 @@ import com.KarthikProject.BooksRepository.Entities.Author;
 import com.KarthikProject.BooksRepository.Exception.BookNotFoundException;
 import com.KarthikProject.BooksRepository.Repositories.AuthorRepositoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -29,12 +32,14 @@ public class BookServiceImpl implements BookService{
 	
 
 	@Override
+//	@Cacheable(value = "books",key = "#id")
 	public Optional<Book> getBookByID(int id) {
 		return bookRepositoryRepo.findById(id);
 		
 	}
 
 	@Override
+//	@Cacheable(value = "books",key = "#name")
 	public Book getBookByName(String name) {
 		// TODO Auto-generated method stub
 		return (Book) bookRepositoryRepo.findByBookNameString(name);
@@ -46,6 +51,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
+//	@CachePut(value = "books", key = "$(book.id)")
 	public void saveBook(Book book) {
 		Author author=book.getAuthor();
 		if(authorRepositoryRepo.existsById(author.getId())){
@@ -69,6 +75,7 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
+//	@CacheEvict(value = "books",key="#id")
 	public HttpStatus deleteBookById(int id) throws BookNotFoundException{
 		if(!this.bookRepositoryRepo.existsById(id)){
 			throw new BookNotFoundException("The given Book ID is not present");

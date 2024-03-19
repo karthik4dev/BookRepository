@@ -1,5 +1,6 @@
 package com.KarthikProject.BooksRepository.Entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @Table(name = "authors")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Author {
+public class Author{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "author_id")

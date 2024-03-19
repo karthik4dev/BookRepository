@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.Serializable;
+
 @Getter
 @Setter
 @Builder
@@ -13,7 +15,7 @@ import lombok.*;
 @Entity
 @Table(name="books")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Book {
+public class Book  {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "book_id")

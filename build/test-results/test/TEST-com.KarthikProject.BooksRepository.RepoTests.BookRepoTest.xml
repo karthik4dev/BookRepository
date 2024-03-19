@@ -1,94 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.KarthikProject.BooksRepository.RepoTests.BookRepoTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-01-29T18:14:53" hostname="DELL" time="0.362">
+<testsuite name="com.KarthikProject.BooksRepository.RepoTests.BookRepoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-08T15:47:07" hostname="DELL" time="0.534">
   <properties/>
-  <testcase name="getBooksWithoutAuthenticationTest()" classname="com.KarthikProject.BooksRepository.RepoTests.BookRepoTest" time="0.362">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;com.KarthikProject.BooksRepository.Repositories.BookRepositoryRepo.findById(Object)&quot; because &quot;&lt;local3&gt;.bookRepositoryRepo&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;com.KarthikProject.BooksRepository.Repositories.BookRepositoryRepo.findById(Object)&quot; because &quot;&lt;local3&gt;.bookRepositoryRepo&quot; is null
-	at com.KarthikProject.BooksRepository.Services.BookServiceImpl.getBookByID(BookServiceImpl.java:33)
-	at com.KarthikProject.BooksRepository.RepoTests.BookRepoTest.getBooksWithoutAuthenticationTest(BookRepoTest.java:41)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
-	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:217)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <system-out><![CDATA[23:44:47.100 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.KarthikProject.BooksRepository.RepoTests.BookRepoTest]: BookRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:44:47.399 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.KarthikProject.BooksRepository.BooksRepositoryApplication for test class com.KarthikProject.BooksRepository.RepoTests.BookRepoTest
+  <testcase name="getBooksWithAuthenticationTest()" classname="com.KarthikProject.BooksRepository.RepoTests.BookRepoTest" time="0.534"/>
+  <system-out><![CDATA[21:16:49.181 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.KarthikProject.BooksRepository.RepoTests.BookRepoTest]: BookRepoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:16:49.855 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.KarthikProject.BooksRepository.BooksRepositoryApplication for test class com.KarthikProject.BooksRepository.RepoTests.BookRepoTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -96,105 +11,28 @@
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::                (v3.1.4)
+ :: Spring Boot ::                (v3.2.0)
 
-2024-01-29T23:44:48.295+05:30  INFO 6364 --- [    Test worker] c.K.B.RepoTests.BookRepoTest             : Starting BookRepoTest using Java 18.0.2.1 with PID 6364 (started by kpnzeus in C:\Users\kpnze\OneDrive\Desktop\Book Application\BookRepository)
-2024-01-29T23:44:48.298+05:30  INFO 6364 --- [    Test worker] c.K.B.RepoTests.BookRepoTest             : No active profile set, falling back to 1 default profile: "default"
-2024-01-29T23:44:52.914+05:30  INFO 6364 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7717b4a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69b37f5c, org.springframework.security.web.context.SecurityContextHolderFilter@1857fe6c, org.springframework.security.web.header.HeaderWriterFilter@214fba74, org.springframework.security.web.csrf.CsrfFilter@311a0b3e, org.springframework.security.web.authentication.logout.LogoutFilter@4aac81ca, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d5ae78e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@56266bda, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@28b5662d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a5b7394, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29b8df5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26101efc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34b2d51a, org.springframework.security.web.access.ExceptionTranslationFilter@359e27d2, org.springframework.security.web.access.intercept.AuthorizationFilter@34e990cc]
-2024-01-29T23:44:53.053+05:30  INFO 6364 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-01-29T23:44:53.059+05:30  INFO 6364 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-01-29T23:44:53.065+05:30  INFO 6364 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
-2024-01-29T23:44:53.132+05:30  INFO 6364 --- [    Test worker] c.K.B.RepoTests.BookRepoTest             : Started BookRepoTest in 5.565 seconds (process running for 7.88)
-2024-01-29T23:44:53.359+05:30  WARN 6364 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while invoking 'afterTestMethod' callback on TestExecutionListener [org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener] for test method [void com.KarthikProject.BooksRepository.RepoTests.BookRepoTest.getBooksWithoutAuthenticationTest()] and test instance [com.KarthikProject.BooksRepository.RepoTests.BookRepoTest@edbc2bf]
+2024-03-08T21:16:56.473+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] c.K.B.RepoTests.BookRepoTest             : Starting BookRepoTest using Java 18.0.2.1 with PID 10244 (started by kpnzeus in C:\Users\kpnze\OneDrive\Desktop\Book Application\BookRepository)
+2024-03-08T21:16:56.514+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] c.K.B.RepoTests.BookRepoTest             : No active profile set, falling back to 1 default profile: "default"
+2024-03-08T21:16:56.595+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-03-08T21:16:56.595+05:30  WARN 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@14fa92af uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2024-03-08T21:16:56.596+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-03-08T21:16:56.596+05:30  WARN 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@761956ac uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2024-03-08T21:16:56.596+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-03-08T21:16:56.597+05:30  WARN 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@71978f46 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): None of labels [] found
+2024-03-08T21:17:06.886+05:30  WARN 10244 --- [BOOK-APPLICATION] [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
 
-org.mockito.exceptions.misusing.UnfinishedStubbingException: 
-Unfinished stubbing detected here:
--> at com.KarthikProject.BooksRepository.RepoTests.BookRepoTest.getBooksWithoutAuthenticationTest(BookRepoTest.java:41)
+Using generated security password: 205b6246-65b6-4345-bba1-27befe08e43f
 
-E.g. thenReturn() may be missing.
-Examples of correct stubbing:
-    when(mock.isOk()).thenReturn(true);
-    when(mock.isOk()).thenThrow(exception);
-    doThrow(exception).when(mock).someVoidMethod();
-Hints:
- 1. missing thenReturn()
- 2. you are trying to stub a final method, which is not supported
- 3. you are stubbing the behaviour of another mock inside before 'thenReturn' instruction is completed
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:86) ~[spring-boot-test-3.1.4.jar:3.1.4]
-	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.resetMocks(ResetMocksTestExecutionListener.java:73) ~[spring-boot-test-3.1.4.jar:3.1.4]
-	at org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener.afterTestMethod(ResetMocksTestExecutionListener.java:67) ~[spring-boot-test-3.1.4.jar:3.1.4]
-	at org.springframework.test.context.TestContextManager.afterTestMethod(TestContextManager.java:440) ~[spring-test-6.0.12.jar:6.0.12]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.afterEach(SpringExtension.java:206) ~[spring-test-6.0.12.jar:6.0.12]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAfterEachCallbacks$12(TestMethodTestDescriptor.java:260) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$13(TestMethodTestDescriptor.java:276) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeAllAfterMethodsOrCallbacks$14(TestMethodTestDescriptor.java:276) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAllAfterMethodsOrCallbacks(TestMethodTestDescriptor.java:275) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeAfterEachCallbacks(TestMethodTestDescriptor.java:259) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:144) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.9.3.jar:5.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.9.3.jar:1.9.3]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:110) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:90) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:85) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) ~[na:na]
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) ~[na:na]
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) ~[na:na]
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) ~[na:na]
-	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) ~[na:na]
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) ~[na:na]
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) ~[na:na]
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) ~[na:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) ~[gradle-worker.jar:na]
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) ~[gradle-worker.jar:na]
-
+2024-03-08T21:17:07.341+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b68932b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77b27b57, org.springframework.security.web.context.SecurityContextHolderFilter@5de243bb, org.springframework.security.web.header.HeaderWriterFilter@29db008c, org.springframework.web.filter.CorsFilter@7adff6cb, org.springframework.security.web.csrf.CsrfFilter@5d68be4f, org.springframework.security.web.authentication.logout.LogoutFilter@405223e4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6723e6b3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3b64f131, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@13ebccd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4cb82b09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35260785, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76d828ff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e80960a, org.springframework.security.web.access.ExceptionTranslationFilter@4de93edd, org.springframework.security.web.access.intercept.AuthorizationFilter@45b08b17]
+2024-03-08T21:17:07.543+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-03-08T21:17:07.545+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-03-08T21:17:07.549+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2024-03-08T21:17:07.625+05:30  INFO 10244 --- [BOOK-APPLICATION] [    Test worker] c.K.B.RepoTests.BookRepoTest             : Started BookRepoTest in 17.465 seconds (process running for 22.512)
+2024-03-08T21:17:07.941+05:30  WARN 10244 --- [BOOK-APPLICATION] [    Test worker] o.s.w.s.h.HandlerMappingIntrospector     : Cache miss for REQUEST dispatch to '/books/All' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

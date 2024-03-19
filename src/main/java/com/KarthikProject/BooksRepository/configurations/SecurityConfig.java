@@ -23,6 +23,7 @@ public class SecurityConfig {
     @Bean
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+
         http.authorizeRequests((requests) -> requests
                 .requestMatchers("/monitor/**","/swagger/**").permitAll()
                 .requestMatchers("/books").hasRole("ADMIN")
