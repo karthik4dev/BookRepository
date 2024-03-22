@@ -24,7 +24,7 @@ public class SecurityConfig {
 
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
-        http.authorizeRequests((requests) -> requests
+        http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/monitor/**","/swagger/**").permitAll()
                 .requestMatchers("/books").hasRole("ADMIN")
                 .anyRequest().authenticated());
