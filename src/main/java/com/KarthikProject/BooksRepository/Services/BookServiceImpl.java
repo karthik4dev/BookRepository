@@ -2,19 +2,20 @@ package com.KarthikProject.BooksRepository.Services;
 
 
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
+import com.KarthikProject.BooksRepository.BooksRepositoryApplication;
+import com.KarthikProject.BooksRepository.DTOs.ApplicationDTO;
+import com.KarthikProject.BooksRepository.DTOs.BookAttributesDTO;
+import com.KarthikProject.BooksRepository.DTOs.BookRepositoryDTO;
 import com.KarthikProject.BooksRepository.Entities.Author;
 import com.KarthikProject.BooksRepository.Exception.BookNotFoundException;
 import com.KarthikProject.BooksRepository.Repositories.AuthorRepositoryRepo;
+//import com.karthikRepository.BookAttributes.DTOs.BookAttrDTO;
+//import com.karthikRepository.BookAttributes.Exceptions.BookAttributesNotFound;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheEvict;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.KarthikProject.BooksRepository.Entities.Book;
@@ -28,14 +29,32 @@ public class BookServiceImpl implements BookService{
 
     @Autowired
     AuthorRepositoryRepo authorRepositoryRepo;
+
+//	BooksRepositoryApplication.IBookAttr bookAttr;
 	
 	
 
 	@Override
 //	@Cacheable(value = "books",key = "#id")
-	public Optional<Book> getBookByID(int id) {
-		return bookRepositoryRepo.findById(id);
-		
+	public Book getBookByID(int id) throws BookNotFoundException{
+		Book book= bookRepositoryRepo.findById(id).orElseThrow(BookNotFoundException::new);
+		BookRepositoryDTO bookRepositoryDTO = BookRepositoryDTO.builder()
+				.id(book.getId())
+				.isbn(book.getIsbn())
+				.bookNameString(book.getBookNameString())
+				.author(book.getAuthor())
+				.build();
+//		ResponseEntity<BookAttrDTO> bookAttributesDTO = bookAttr.getBookAttributes(id);
+//		BookAttributesDTO bookAttrDTO = BookAttributesDTO.builder()
+//				.bookBind(Objects.requireNonNull(bookAttributesDTO.getBody()).getBookBind())
+//				.bookType(bookAttributesDTO.getBody().getBookType())
+//				.bookPages(bookAttributesDTO.getBody().getBookPages())
+//				.bookID(bookAttributesDTO.getBody().getBookID())
+//				.bookPages(bookAttributesDTO.getBody().getBookPages())
+//				.build();
+
+//		ApplicationDTO applicationDTO = new ApplicationDTO(bookAttrDTO,bookRepositoryDTO);
+		return book;
 	}
 
 	@Override
@@ -76,19 +95,15 @@ public class BookServiceImpl implements BookService{
 
 	@Override
 //	@CacheEvict(value = "books",key="#id")
-	public HttpStatus deleteBookById(int id) throws BookNotFoundException{
-		if(!this.bookRepositoryRepo.existsById(id)){
-			throw new BookNotFoundException("The given Book ID is not present");
-		}
+	public HttpStatus deleteBookById(int id) {
+
 		this.bookRepositoryRepo.deleteById(id);
 		return HttpStatus.GONE;
 	}
 
 	@Override
-	public HttpStatus UpdateBookById(int id,Book book) throws BookNotFoundException {
-		if(!this.bookRepositoryRepo.existsById(id)){
-			throw new BookNotFoundException("The given Book ID is not present");
-		}
+	public HttpStatus UpdateBookById(int id,Book book){
+
 		Book givenBook=bookRepositoryRepo.findById(id).get();
 		givenBook.setBookNameString(book.getBookNameString());
 		givenBook.setIsbn(book.getIsbn());
