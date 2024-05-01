@@ -2,16 +2,15 @@ package com.KarthikProject.BooksRepository.Entities;
 
 import jakarta.persistence.*;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
 @Entity(name = "userDetails")
 @Getter
 @Setter
-@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Users {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,140 +1,406 @@
-2024-03-28T22:30:20.270+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : Starting BooksRepositoryApplication using Java 18.0.2.1 with PID 4928 (C:\Users\kpnze\OneDrive\Desktop\Book Application\BookRepository\build\classes\java\main started by kpnzeus in C:\Users\kpnze\OneDrive\Desktop\Book Application\BookRepository)
-2024-03-28T22:30:20.307+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-03-28T22:30:20.616+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-03-28T22:30:20.627+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=BOOK-APPLICATION, profiles=[default], label=null, version=29049429eaa5b060d5cfc86c9945d13838af6c59, state=null
-2024-03-28T22:30:20.633+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2024-03-28T22:30:20.633+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2024-03-28T22:30:28.114+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-03-28T22:30:28.825+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 578 ms. Found 2 JPA repository interfaces.
-2024-03-28T22:30:29.880+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8bb6b656-daa8-36e6-946e-fca00fbf0b50
-2024-03-28T22:30:31.018+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
-2024-03-28T22:30:31.030+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.044+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.101+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.109+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.113+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$672/0x000000080109e570] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.124+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.158+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.191+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.201+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.205+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.210+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.232+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.308+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.315+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.318+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.327+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:31.334+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
-2024-03-28T22:30:33.015+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
-2024-03-28T22:30:33.063+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-03-28T22:30:33.064+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
-2024-03-28T22:30:33.349+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-03-28T22:30:33.353+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12719 ms
-2024-03-28T22:30:35.083+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-03-28T22:30:35.419+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2024-03-28T22:30:35.569+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-03-28T22:30:36.680+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-03-28T22:30:36.809+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-03-28T22:30:38.049+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7ea8f3
-2024-03-28T22:30:38.055+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-03-28T22:30:41.377+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-03-28T22:30:41.586+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-03-28T22:30:45.824+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-03-28T22:30:46.074+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
-2024-03-28T22:30:49.182+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2024-03-28T22:30:50.270+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/monitor'
-2024-03-28T22:30:50.741+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@758c0cef, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1372e6b6, org.springframework.security.web.context.SecurityContextHolderFilter@1019160d, org.springframework.security.web.header.HeaderWriterFilter@55ce5ba3, org.springframework.security.web.authentication.logout.LogoutFilter@58ad2dcf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@10c21702, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e3f7a4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@216f8598, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@382b4466, org.springframework.security.web.access.ExceptionTranslationFilter@417f8aa0, org.springframework.security.web.access.intercept.AuthorizationFilter@77c718f0]
-2024-03-28T22:30:52.875+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2024-03-28T22:30:54.351+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2024-03-28T22:30:54.404+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2024-03-28T22:30:54.527+05:30  WARN 4928 --- [BOOK-APPLICATION] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2024-03-28T22:30:54.821+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2024-03-28T22:30:55.034+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2024-03-28T22:30:55.047+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2024-03-28T22:30:55.131+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2024-03-28T22:30:55.131+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2024-03-28T22:30:55.131+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2024-03-28T22:30:55.131+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2024-03-28T22:30:55.132+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2024-03-28T22:30:55.132+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2024-03-28T22:30:55.132+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2024-03-28T22:30:55.824+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2024-03-28T22:30:55.832+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2024-03-28T22:30:55.837+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2024-03-28T22:30:55.845+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1711645255845 with initial instances count: 2
-2024-03-28T22:30:55.863+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOK-APPLICATION with eureka with status UP
-2024-03-28T22:30:55.865+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1711645255865, current=UP, previous=STARTING]
-2024-03-28T22:30:55.871+05:30  INFO 4928 --- [BOOK-APPLICATION] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000: registering service...
-2024-03-28T22:30:55.969+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
-2024-03-28T22:30:55.971+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8000
-2024-03-28T22:30:56.018+05:30  INFO 4928 --- [BOOK-APPLICATION] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000 - registration status: 204
-2024-03-28T22:30:57.427+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2024-03-28T22:30:57.499+05:30  INFO 4928 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : Started BooksRepositoryApplication in 44.455 seconds (process running for 46.553)
-2024-03-28T22:32:00.249+05:30  INFO 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-03-28T22:32:00.252+05:30  INFO 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-03-28T22:32:00.257+05:30  INFO 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2024-03-28T22:32:00.312+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
-2024-03-28T22:32:00.346+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:00.467+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/swagger-ui/index.html?continue to session
-2024-03-28T22:32:00.469+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:00.470+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:00.494+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-03-28T22:32:00.495+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:00.499+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/error?continue to session
-2024-03-28T22:32:00.500+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:00.500+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:05.895+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
-2024-03-28T22:32:06.117+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.118+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.121+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
-2024-03-28T22:32:06.181+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
-2024-03-28T22:32:06.196+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.197+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.200+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
-2024-03-28T22:32:06.205+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
-2024-03-28T22:32:06.215+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.216+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-6] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.217+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
-2024-03-28T22:32:06.228+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
-2024-03-28T22:32:06.229+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
-2024-03-28T22:32:06.233+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.234+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-7] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.236+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
-2024-03-28T22:32:06.242+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.243+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-8] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.244+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
-2024-03-28T22:32:06.271+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
-2024-03-28T22:32:06.275+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.276+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-9] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.277+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
-2024-03-28T22:32:06.640+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api-docs/swagger-config
-2024-03-28T22:32:06.644+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:06.648+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/api-docs/swagger-config?continue to session
-2024-03-28T22:32:06.650+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:06.651+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:06.651+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
-2024-03-28T22:32:06.654+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-03-28T22:32:06.656+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.656+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:06.657+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.658+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
-2024-03-28T22:32:06.658+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/error?continue to session
-2024-03-28T22:32:06.659+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:06.660+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:06.670+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api-docs/swagger-config
-2024-03-28T22:32:06.675+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.676+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.677+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api-docs/swagger-config
-2024-03-28T22:32:06.745+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api-docs
-2024-03-28T22:32:06.746+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:06.751+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:06.751+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:06.754+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
-2024-03-28T22:32:06.755+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2024-03-28T22:32:06.756+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2024-03-28T22:32:06.756+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@6b6c62b3
-2024-03-28T22:32:06.760+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api-docs
-2024-03-28T22:32:06.765+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2024-03-28T22:32:06.767+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=A2F1D8EDEC0DD09EB4338E8852F43AD9], Granted Authorities=[ROLE_ADMIN, USER]]
-2024-03-28T22:32:06.768+05:30 DEBUG 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api-docs
-2024-03-28T22:32:07.274+05:30  INFO 4928 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 479 ms
+2024-04-09T19:47:50.528+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : Starting BooksRepositoryApplication using Java 18.0.2.1 with PID 17488 (C:\Users\kpnze\OneDrive\Desktop\Book Application\build\classes\java\main started by kpnzeus in C:\Users\kpnze\OneDrive\Desktop\Book Application)
+2024-04-09T19:47:50.543+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-04-09T19:47:50.805+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-04-09T19:47:50.809+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=BOOK-APPLICATION, profiles=[default], label=null, version=29049429eaa5b060d5cfc86c9945d13838af6c59, state=null
+2024-04-09T19:47:50.814+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-04-09T19:47:50.815+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-04-09T19:47:55.490+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-09T19:47:55.843+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 334 ms. Found 2 JPA repository interfaces.
+2024-04-09T19:47:56.717+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=02293d63-65d0-33c1-b342-d9db2cbc1b41
+2024-04-09T19:47:57.688+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-04-09T19:47:57.697+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.704+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.732+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.739+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.743+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$671/0x000000080109cc08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.753+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.774+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.792+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.814+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.817+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.824+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.844+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.883+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.888+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.892+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.898+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:57.904+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-04-09T19:47:59.286+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8000 (http)
+2024-04-09T19:47:59.324+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-09T19:47:59.325+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-09T19:47:59.649+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-09T19:47:59.651+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8834 ms
+2024-04-09T19:48:00.965+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-09T19:48:01.172+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-09T19:48:01.283+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-09T19:48:02.167+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-09T19:48:02.252+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-09T19:48:03.072+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22eec2ad
+2024-04-09T19:48:03.090+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-09T19:48:05.712+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-09T19:48:06.148+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-09T19:48:08.201+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-09T19:48:08.328+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2024-04-09T19:48:11.296+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-04-09T19:48:11.919+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/monitor'
+2024-04-09T19:48:12.129+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9ff9ab3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d752a73, org.springframework.security.web.context.SecurityContextHolderFilter@51eb435b, org.springframework.security.web.header.HeaderWriterFilter@51c35773, org.springframework.security.web.authentication.logout.LogoutFilter@d452263, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2252152d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54cde97, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ce33b14, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5666f0d, org.springframework.security.web.access.ExceptionTranslationFilter@723068e1, org.springframework.security.web.access.intercept.AuthorizationFilter@75b918f4]
+2024-04-09T19:48:13.888+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-04-09T19:48:15.253+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-04-09T19:48:15.297+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-04-09T19:48:15.371+05:30  WARN 17488 --- [BOOK-APPLICATION] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-04-09T19:48:15.710+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-04-09T19:48:16.063+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-04-09T19:48:16.076+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-04-09T19:48:16.123+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-04-09T19:48:16.124+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-04-09T19:48:16.124+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-04-09T19:48:16.124+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-04-09T19:48:16.124+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-04-09T19:48:16.125+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-04-09T19:48:16.125+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-04-09T19:48:16.657+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-04-09T19:48:16.691+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-04-09T19:48:16.696+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-04-09T19:48:16.716+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1712672296715 with initial instances count: 2
+2024-04-09T19:48:16.730+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOK-APPLICATION with eureka with status UP
+2024-04-09T19:48:16.732+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1712672296731, current=UP, previous=STARTING]
+2024-04-09T19:48:16.735+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000: registering service...
+2024-04-09T19:48:16.796+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8000 (http) with context path ''
+2024-04-09T19:48:16.799+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8000
+2024-04-09T19:48:16.837+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000 - registration status: 204
+2024-04-09T19:48:18.207+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2024-04-09T19:48:18.245+05:30  INFO 17488 --- [BOOK-APPLICATION] [restartedMain] c.K.B.BooksRepositoryApplication         : Started BooksRepositoryApplication in 32.606 seconds (process running for 34.015)
+2024-04-09T19:49:12.774+05:30  INFO 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-09T19:49:12.775+05:30  INFO 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-09T19:49:12.781+05:30  INFO 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-04-09T19:49:12.843+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /actuator/info
+2024-04-09T19:49:12.882+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-09T19:49:13.000+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/actuator/info?continue to session
+2024-04-09T19:49:13.001+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-04-09T19:49:13.001+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4fbd8fa1
+2024-04-09T19:49:13.074+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-04-09T19:49:13.077+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-09T19:49:13.083+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/error?continue to session
+2024-04-09T19:49:13.084+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-04-09T19:49:13.084+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-2] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4fbd8fa1
+2024-04-09T19:49:19.642+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /actuator/info
+2024-04-09T19:49:19.888+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-09T19:49:19.889+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=11253FBDF84EB9D279B8CED984FEA71C], Granted Authorities=[ROLE_ADMIN, USER]]
+2024-04-09T19:49:19.894+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /actuator/info
+2024-04-09T19:49:19.919+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-04-09T19:49:19.921+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2024-04-09T19:49:20.139+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-04-09T19:49:20.141+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-09T19:49:20.142+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-04-09T19:49:20.143+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4fbd8fa1
+2024-04-09T19:49:20.151+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-04-09T19:49:20.152+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2024-04-09T19:49:20.155+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] o.s.s.w.s.HttpSessionRequestCache        : Saved request http://localhost:8000/error?continue to session
+2024-04-09T19:49:20.155+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
+2024-04-09T19:49:20.155+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-3] s.w.a.DelegatingAuthenticationEntryPoint : No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4fbd8fa1
+2024-04-09T19:49:20.166+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2024-04-09T19:49:20.171+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-09T19:49:20.171+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=11253FBDF84EB9D279B8CED984FEA71C], Granted Authorities=[ROLE_ADMIN, USER]]
+2024-04-09T19:49:20.173+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2024-04-09T19:49:20.180+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2024-04-09T19:49:20.182+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /error
+2024-04-09T19:49:36.164+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /monitor/info
+2024-04-09T19:49:36.174+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2024-04-09T19:49:36.175+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.s.w.a.www.BasicAuthenticationFilter  : Set SecurityContextHolder to UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=Karthik, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN, USER]], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=0:0:0:0:0:0:0:1, SessionId=11253FBDF84EB9D279B8CED984FEA71C], Granted Authorities=[ROLE_ADMIN, USER]]
+2024-04-09T19:49:36.176+05:30 DEBUG 17488 --- [BOOK-APPLICATION] [http-nio-8000-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /monitor/info
+2024-04-09T19:50:16.791+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1079)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:960)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1475)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2024-04-09T19:50:16.800+05:30  WARN 17488 --- [BOOK-APPLICATION] [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-04-09T19:50:16.837+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 19 more
+
+2024-04-09T19:50:16.838+05:30  WARN 17488 --- [BOOK-APPLICATION] [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-04-09T19:50:16.869+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:145)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getDelta(RestTemplateEurekaHttpClient.java:155)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1079)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:960)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1475)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 23 more
+
+2024-04-09T19:50:16.870+05:30  WARN 17488 --- [BOOK-APPLICATION] [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/delta": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-04-09T19:50:16.885+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1079)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:960)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1475)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1442)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2024-04-09T19:50:16.886+05:30  INFO 17488 --- [BOOK-APPLICATION] [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:99)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:539)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:184)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+2024-04-09T19:50:16.887+05:30  WARN 17488 --- [BOOK-APPLICATION] [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+2024-04-09T19:50:16.887+05:30 ERROR 17488 --- [BOOK-APPLICATION] [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOK-APPLICATION/localhost:BOOK-APPLICATION:8000 - was unable to send heartbeat!
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:837) ~[eureka-client-2.0.1.jar:2.0.1]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1401) ~[eureka-client-2.0.1.jar:2.0.1]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
