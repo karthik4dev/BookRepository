@@ -2,11 +2,18 @@ package com.KarthikProject.BooksRepository.configurations;
 
 
 
+import com.KarthikProject.BooksRepository.Services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
@@ -14,14 +21,17 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
-import java.util.Arrays;
+
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+    @Autowired
+    UserService service;
+    @Autowired
+    PasswordEncoder encoder;
 
     @Bean
-
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
         http.authorizeHttpRequests((requests) -> requests
@@ -29,8 +39,8 @@ public class SecurityConfig {
                 .requestMatchers("/books").hasRole("ADMIN")
                 .anyRequest().authenticated());
         http.httpBasic(Customizer.withDefaults());
-        http.csrf(csrf -> csrf.disable());
-        http.cors(cors -> cors.disable());
+        http.csrf(AbstractHttpConfigurer::disable);
+        http.cors(AbstractHttpConfigurer::disable);
 
         return http.build();
 
@@ -63,6 +73,15 @@ public class SecurityConfig {
         jdbc.setAuthoritiesByUsernameQuery(" Select user_name , roles" +
                 " from roles where user_name = ? ");
         return jdbc;
+    }
+
+    @Bean
+    public AuthenticationProvider authenticationProvider(){
+        DaoAuthenticationProvider authenticationProvider=new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService((UserDetailsService) service);
+        authenticationProvider.setPasswordEncoder(encoder);
+        authe
+        return ;
     }
 
 //    @Bean

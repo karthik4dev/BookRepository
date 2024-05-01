@@ -10,6 +10,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 @OpenAPIDefinition(info = @Info(title = "Book Application",
 					version = "1.0"
@@ -17,12 +19,12 @@ import org.springframework.context.annotation.Bean;
 contact = @Contact(name = "Karthik P N",email = "karthikpnrao.97@gmail.com")))
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
 //@EnableCaching
 public class BooksRepositoryApplication {
-	@FeignClient(path = "${BookAttributes.url}",value="BOOK-ATTRIBUTES")
-	public interface IBookAttr{
 
+	@Bean
+	public PasswordEncoder getPassWordEncoder(){
+		return new BCryptPasswordEncoder();
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(BooksRepositoryApplication.class, args);
