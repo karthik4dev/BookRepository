@@ -7,6 +7,7 @@ import com.karthikProject.Authserver.Exception.UserAlreadyExistsException;
 import com.karthikProject.Authserver.Exception.UserNotFoundException;
 import com.karthikProject.Authserver.Repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,12 @@ public class UserInfoServiceImpl implements UserInfoService{
 
     @Autowired
     PasswordEncoder passwordEncoder;
+
+    @Autowired
+    JWTService service;
+
+    @Autowired
+    AuthenticationManager manager;
 
     @Override
     public UserInfoDTO getUserByName(String username) {
@@ -53,5 +60,16 @@ public class UserInfoServiceImpl implements UserInfoService{
     @Override
     public void deleteAll() {
         userInfoRepository.deleteAll();
+    }
+
+    @Override
+    public String generateJWTToken(String name) {
+        return service.generateToken(name);
+
+    }
+
+    @Override
+    public void validateJWTToken(String token) {
+        service.validateToken(token);
     }
 }
