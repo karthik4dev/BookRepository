@@ -1,5 +1,6 @@
 package com.karthikProject.Authserver.Controller;
 
+import com.karthikProject.Authserver.DTO.UserInfoDTO;
 import com.karthikProject.Authserver.Entity.UserInfo;
 import com.karthikProject.Authserver.Service.UserInfoService;
 import lombok.AllArgsConstructor;
@@ -19,7 +20,7 @@ public class UserInfoController {
     }
 
     @GetMapping("/{username}")
-    public ResponseEntity<UserInfo> getUserInfoByName(@PathVariable String username){
+    public ResponseEntity<UserInfoDTO> getUserInfoByName(@PathVariable String username){
         return ResponseEntity.ok(service.getUserByName(username));
     }
 

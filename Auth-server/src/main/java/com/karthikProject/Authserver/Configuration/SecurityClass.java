@@ -22,9 +22,8 @@ public class SecurityClass {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/users/**").permitAll().anyRequest().authenticated()).csrf((csrf) -> csrf.disable())
-                .cors((cors) -> cors.disable()).build();
-
+        return http.authorizeHttpRequests(authorize -> authorize.requestMatchers("/users/**").permitAll().anyRequest().authenticated())
+                .csrf((csrf) -> csrf.disable()).build();
     }
 
     @Bean
