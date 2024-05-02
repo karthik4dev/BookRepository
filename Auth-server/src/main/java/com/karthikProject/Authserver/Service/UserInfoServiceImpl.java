@@ -1,14 +1,16 @@
 package com.karthikProject.Authserver.Service;
 
+import com.karthikProject.Authserver.DTO.UserInfoDTO;
 import com.karthikProject.Authserver.Entity.Roles;
 import com.karthikProject.Authserver.Entity.UserInfo;
+import com.karthikProject.Authserver.Exception.UserAlreadyExistsException;
+import com.karthikProject.Authserver.Exception.UserNotFoundException;
 import com.karthikProject.Authserver.Repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserInfoServiceImpl implements UserInfoService{
@@ -19,15 +21,20 @@ public class UserInfoServiceImpl implements UserInfoService{
     PasswordEncoder passwordEncoder;
 
     @Override
-    public UserInfo getUserByName(String username) {
-        Optional<UserInfo> user= userInfoRepository.findByName(username);
-        return user.orElseThrow(() -> new RuntimeException("No user found"));
+    public UserInfoDTO getUserByName(String username) {
+        UserInfo user= userInfoRepository.findByName(username).orElseThrow(() -> new RuntimeException("No user found"));
+        UserInfoDTO DTO = UserInfoDTO.builder()
+                .id(user.getId())
+                .username(user.getName())
+                .roles(user.getRolesList())
+                .enabled(user.getEnabled()>0).build();
+        return DTO;
     }
 
     @Override
     public List<Roles> getUserAuthoritiesById(int id) {
         UserInfo user = userInfoRepository.findById(id).orElseThrow(() -> {
-            throw new RuntimeException();
+            throw new UserNotFoundException("Given ID is not present in DB");
         });
         return user.getRolesList();
     }
@@ -35,8 +42,11 @@ public class UserInfoServiceImpl implements UserInfoService{
     @Override
     public void saveUserInfo(UserInfo userInfo) {
         String password= passwordEncoder.encode(userInfo.getPassword());
-        System.out.println("Current Password is "+password);
+//        System.out.println("Current Password is "+password);
         userInfo.setPassword(password);
+        if(userInfoRepository.findByName(userInfo.getName()).isPresent()){
+            throw new UserAlreadyExistsException("User with same username "+userInfo.getName()+" already exists");
+        }
         userInfoRepository.save(userInfo);
     }
 
