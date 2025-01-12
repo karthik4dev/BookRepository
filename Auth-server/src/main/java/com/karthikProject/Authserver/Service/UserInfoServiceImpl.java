@@ -7,6 +7,9 @@ import com.karthikProject.Authserver.Exception.UserAlreadyExistsException;
 import com.karthikProject.Authserver.Exception.UserNotFoundException;
 import com.karthikProject.Authserver.Repository.UserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -27,6 +30,7 @@ public class UserInfoServiceImpl implements UserInfoService{
     @Autowired
     AuthenticationManager manager;
 
+    @Cacheable(cacheNames = "users", key = "#username")
     @Override
     public UserInfoDTO getUserByName(String username) {
         UserInfo user= userInfoRepository.findByName(username).orElseThrow(() -> new RuntimeException("No user found"));
@@ -38,6 +42,7 @@ public class UserInfoServiceImpl implements UserInfoService{
         return DTO;
     }
 
+
     @Override
     public List<Roles> getUserAuthoritiesById(int id) {
         UserInfo user = userInfoRepository.findById(id).orElseThrow(() -> {
@@ -46,6 +51,7 @@ public class UserInfoServiceImpl implements UserInfoService{
         return user.getRolesList();
     }
 
+    @CachePut(cacheNames = "users",key = "#userInfo.getName()")
     @Override
     public void saveUserInfo(UserInfo userInfo) {
         String password= passwordEncoder.encode(userInfo.getPassword());
@@ -57,6 +63,7 @@ public class UserInfoServiceImpl implements UserInfoService{
         userInfoRepository.save(userInfo);
     }
 
+    @CacheEvict(cacheNames = "users",allEntries = true)
     @Override
     public void deleteAll() {
         userInfoRepository.deleteAll();
